@@ -28,14 +28,14 @@ while 1:
             break
         if event.type == MOUSEBUTTONUP:#滑鼠鍵放開判定
             if left:
-                left = "press"#如果滑鼠左鍵放開,則把left設為press
+                left = "depress"#如果滑鼠左鍵放開,則把left設為press
     
     prompt_surface = pg.Surface((200,25))#建立空的提示圖層
     if win == -1:#平手
         prompt_surface.blit(font.render("No one won...",True,(255,255,255)),(50,0))#印出沒人贏
     elif win == 1 or win == 2:#某人贏了
         prompt_surface.blit(font.render("P%d win!"%win,True,(255,255,255)),(75,0))#印出誰贏
-    elif left == "press" and abs(x-100) < 75 and abs(y-100) < 75:#滑鼠按下判定區
+    elif left == "depress" and abs(x-100) < 75 and abs(y-100) < 75:#滑鼠按下判定區
         i,j = int((x-25)//50),int((y-25)//50)#計算行列
         if data[i][j] == 0:#空格子才能選
             if player == 1:
