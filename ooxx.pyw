@@ -28,7 +28,7 @@ while 1:
             break
         if event.type == MOUSEBUTTONUP:#滑鼠鍵放開判定
             if left:
-                left = "depress"#如果滑鼠左鍵放開,則把left設為press
+                left = "depress"#如果滑鼠左鍵放開,則把left設為depress
     
     prompt_surface = pg.Surface((200,25))#建立空的提示圖層
     if win == -1:#平手
